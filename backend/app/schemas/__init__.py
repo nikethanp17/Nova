@@ -5,6 +5,7 @@ Provides Pydantic schemas validating API request bodies and wrapping JSON payloa
 
 from app.schemas.auth import LoginRequest, RefreshRequest, TokenResponse
 from app.schemas.common import ErrorDetail, ResponseEnvelope
+from app.schemas.task import TaskCreate, TaskResponse, TaskUpdate
 from app.schemas.user import UserRegisterRequest, UserResponse
 
 __all__ = [
@@ -12,6 +13,9 @@ __all__ = [
     "LoginRequest",
     "RefreshRequest",
     "ResponseEnvelope",
+    "TaskCreate",
+    "TaskResponse",
+    "TaskUpdate",
     "TokenResponse",
     "UserRegisterRequest",
     "UserResponse",
