@@ -33,6 +33,9 @@ class BaseAppConfig(BaseSettings):
 
     RATE_LIMIT_PER_MINUTE: int = 100
 
+    MONGODB_URI: str = "mongodb://localhost:27017"
+    MONGODB_DATABASE: str = "nova_dev"
+
     # Pydantic v2 settings configuration
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -62,6 +65,7 @@ class TestingConfig(BaseAppConfig):
     RATE_LIMIT_PER_MINUTE: int = (
         10000  # High limit to allow uninterrupted test execution
     )
+    MONGODB_DATABASE: str = "nova_test"
 
 
 class ProductionConfig(BaseAppConfig):
