@@ -17,6 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
+from app.api.v1 import v1_router
 from app.core.config import get_settings
 from app.core.exceptions import NovaException
 from app.core.logging import get_logger, request_id_var, setup_logging
@@ -278,6 +279,9 @@ def create_app() -> FastAPI:
             "environment": settings.APP_ENV,
             "database": "connected" if db_connected else "disconnected",
         }
+
+    # 6. Mount API Version 1 Routers
+    app.include_router(v1_router, prefix="/api/v1")
 
     return app
 

@@ -1,5 +1,15 @@
-"""Repository Layer.
+"""Repositories Package.
 
-Exposes abstract repository interfaces and database adapters ensuring
-clean separation between the persistence system and service logic.
+Declares database persistence adapters isolating storage drivers from use case services.
 """
+
+from app.repositories.base import BaseRepository, MongoRepository
+from app.repositories.refresh_token_repository import RefreshTokenRepository
+from app.repositories.user_repository import UserRepository
+
+__all__ = [
+    "BaseRepository",
+    "MongoRepository",
+    "RefreshTokenRepository",
+    "UserRepository",
+]

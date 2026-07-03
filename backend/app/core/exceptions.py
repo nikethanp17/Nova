@@ -68,6 +68,24 @@ class ValidationException(NovaException):
         )
 
 
+class ConflictException(NovaException):
+    """Exception raised when a resource conflict occurs (e.g. duplicate key)."""
+
+    def __init__(
+        self,
+        message: str = "Conflict detected",
+        error_code: str = "CONFLICT",
+        details: Any = None,
+    ) -> None:
+        """Initialize ConflictException with a default 409 status code."""
+        super().__init__(
+            status_code=409,
+            error_code=error_code,
+            message=message,
+            details=details,
+        )
+
+
 class AuthenticationException(NovaException):
     """Exception raised when authentication fails or is missing."""
 

@@ -36,6 +36,11 @@ class BaseAppConfig(BaseSettings):
     MONGODB_URI: str = "mongodb://localhost:27017"
     MONGODB_DATABASE: str = "nova_dev"
 
+    JWT_SECRET_KEY: str = "supersecretkeychangeinproduction"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+
     # Pydantic v2 settings configuration
     model_config = SettingsConfigDict(
         env_file=".env",

@@ -15,6 +15,8 @@ dependencies = [
     "python-multipart>=0.0.18",
     "motor>=3.6.0",
     "dnspython>=2.6.0",
+    "argon2-cffi>=23.1.0",
+    "pyjwt>=2.10.0",
 ]
 
 [project.optional-dependencies]
@@ -56,6 +58,7 @@ select = [
 ignore = [
     "A003", # shadow built-in (allow 'id' as field name)
     "N818", # exception name standard (we follow ARCHITECTURE.md exception classes ending with Exception)
+    "B008", # do not perform function call in argument defaults (required for FastAPI Depends)
 ]
 
 

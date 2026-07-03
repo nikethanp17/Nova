@@ -5,8 +5,10 @@ MongoDB collections.
 """
 
 from abc import ABC, abstractmethod
-from typing import Any
+from typing import Any, cast
 
+from bson import ObjectId
+from bson.errors import InvalidId
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
 
@@ -97,15 +99,38 @@ class BaseRepository[T](ABC):
 class MongoRepository[T](BaseRepository[T], ABC):
     """Concrete abstract repository implementation for MongoDB collections."""
 
-    def __init__(self, db: AsyncIOMotorDatabase[Any], collection_name: str) -> None:
+    def __init__(
+        self,
+        db: AsyncIOMotorDatabase[Any],
+        collection_name: str,
+        model_class: type[T] | None = None,
+    ) -> None:
         """Initialize the repository context.
 
         Args:
             db: Active database connection handler.
             collection_name: Target collection name in the database.
+            model_class: Optional model class to serialize loaded documents.
         """
         self.db = db
         self.collection = db[collection_name]
+        self.model_class = model_class
+
+    def _to_entity(self, document: dict[str, Any]) -> T:
+        """Serialize loaded document dict into target class T.
+
+        Args:
+            document: Raw document fields from database.
+
+        Returns:
+            T: Serialized domain entity instance.
+        """
+        mapped = self._map_id(document)
+        if self.model_class is not None:
+            if hasattr(self.model_class, "model_validate"):
+                return cast(T, self.model_class.model_validate(mapped))  # type: ignore[attr-defined]
+            return self.model_class(**mapped)
+        return cast(T, mapped)
 
     async def find_by_id(self, entity_id: str) -> T | None:
         """Find a single document by unique string ID.
@@ -116,11 +141,12 @@ class MongoRepository[T](BaseRepository[T], ABC):
         Returns:
             T | None: Unmarshaled document payload, or None.
         """
-        # MongoDB uses bson ObjectId, we support query via direct ID mapping.
-        # In a fully concrete implementation, the subclass resolves type mappings
-        # (e.g. converting string ID into ObjectId representation).
-        document = await self.collection.find_one({"_id": entity_id})
-        return self._map_id(document) if document else None
+        try:
+            obj_id = ObjectId(entity_id)
+        except (InvalidId, TypeError):
+            obj_id = entity_id  # type: ignore[assignment]
+        document = await self.collection.find_one({"_id": obj_id})
+        return self._to_entity(document) if document else None
 
     async def find_one(self, filters: dict[str, Any]) -> T | None:
         """Find a single document matching criteria queries.
@@ -132,7 +158,7 @@ class MongoRepository[T](BaseRepository[T], ABC):
             T | None: Unmarshaled document payload, or None.
         """
         document = await self.collection.find_one(filters)
-        return self._map_id(document) if document else None
+        return self._to_entity(document) if document else None
 
     async def find_many(
         self,
@@ -152,7 +178,7 @@ class MongoRepository[T](BaseRepository[T], ABC):
         """
         cursor = self.collection.find(filters).skip(skip).limit(limit)
         documents = await cursor.to_list(length=limit)
-        return [self._map_id(doc) for doc in documents]
+        return [self._to_entity(doc) for doc in documents]
 
     async def insert(self, data: dict[str, Any]) -> str:
         """Insert a document map record.
@@ -176,7 +202,11 @@ class MongoRepository[T](BaseRepository[T], ABC):
         Returns:
             bool: True if matched and updated, False otherwise.
         """
-        result = await self.collection.update_one({"_id": entity_id}, {"$set": updates})
+        try:
+            obj_id = ObjectId(entity_id)
+        except (InvalidId, TypeError):
+            obj_id = entity_id  # type: ignore[assignment]
+        result = await self.collection.update_one({"_id": obj_id}, {"$set": updates})
         return result.modified_count > 0
 
     async def delete(self, entity_id: str) -> bool:
@@ -188,7 +218,11 @@ class MongoRepository[T](BaseRepository[T], ABC):
         Returns:
             bool: True if matched and deleted, False otherwise.
         """
-        result = await self.collection.delete_one({"_id": entity_id})
+        try:
+            obj_id = ObjectId(entity_id)
+        except (InvalidId, TypeError):
+            obj_id = entity_id  # type: ignore[assignment]
+        result = await self.collection.delete_one({"_id": obj_id})
         return result.deleted_count > 0
 
     def _map_id(self, document: dict[str, Any]) -> Any:
