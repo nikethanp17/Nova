@@ -19,6 +19,12 @@ VALID_TRANSITIONS = {
         TaskStatus.CANCELLED,
     },
     TaskStatus.PLANNING: {
+        TaskStatus.READY,
+        TaskStatus.RUNNING,
+        TaskStatus.FAILED,
+        TaskStatus.CANCELLED,
+    },
+    TaskStatus.READY: {
         TaskStatus.RUNNING,
         TaskStatus.FAILED,
         TaskStatus.CANCELLED,

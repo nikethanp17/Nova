@@ -1,0 +1,8 @@
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "TaskStarted", "timestamp": "2026-07-04T09:04:15.618286Z"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "StepStarted", "timestamp": "2026-07-04T09:04:15.619302Z", "step_number": 1, "action": "navigate", "target": "https://careers.google.com"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T09:04:15.619482Z", "step_number": 1, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/backend/workspace/tasks/6a48cc71ac1b013e35f67b86/screenshots/step_1.png"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "StepCompleted", "timestamp": "2026-07-04T09:04:15.619540Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "StepStarted", "timestamp": "2026-07-04T09:04:15.619578Z", "step_number": 2, "action": "fill", "target": "input[type='search']"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T09:04:15.619806Z", "step_number": 2, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/backend/workspace/tasks/6a48cc71ac1b013e35f67b86/screenshots/step_2.png"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "StepCompleted", "timestamp": "2026-07-04T09:04:15.619860Z", "step_number": 2, "status": "FAILED", "duration_ms": 0, "error": "Unsupported action trigger: fill"}
+{"task_id": "6a48cc71ac1b013e35f67b86", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T09:04:15.619906Z", "status": "FAILED", "error": "Unsupported action trigger: fill"}

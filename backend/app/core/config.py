@@ -23,7 +23,7 @@ class BaseAppConfig(BaseSettings):
     DEBUG: bool = False
 
     HOST: str = "0.0.0.0"
-    PORT: int = 8000
+    PORT: int = 8080
 
     LOG_LEVEL: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
     LOG_FORMAT: Literal["json", "text"] = "json"
@@ -40,6 +40,8 @@ class BaseAppConfig(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
     JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+
+    GEMINI_API_KEY: str | None = None
 
     # Pydantic v2 settings configuration
     model_config = SettingsConfigDict(

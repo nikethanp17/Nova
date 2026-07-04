@@ -1,0 +1,11 @@
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "TaskStarted", "timestamp": "2026-07-04T10:25:11.102272Z"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepStarted", "timestamp": "2026-07-04T10:25:11.103548Z", "step_number": 1, "action": "navigate", "target": "https://careers.google.com"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:25:11.104091Z", "step_number": 1, "screenshot_path": "/workspace/tasks/6a48df7a238c879025897ba6/screenshots/step_1.png"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:25:11.104270Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepStarted", "timestamp": "2026-07-04T10:25:11.104419Z", "step_number": 2, "action": "fill", "target": "input[type='search']"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:25:11.104782Z", "step_number": 2, "screenshot_path": "/workspace/tasks/6a48df7a238c879025897ba6/screenshots/step_2.png"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:25:11.104938Z", "step_number": 2, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepStarted", "timestamp": "2026-07-04T10:25:11.105074Z", "step_number": 3, "action": "validate", "target": null}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:25:11.105422Z", "step_number": 3, "screenshot_path": "/workspace/tasks/6a48df7a238c879025897ba6/screenshots/step_3.png"}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:25:11.105544Z", "step_number": 3, "status": "FAILED", "duration_ms": 0, "error": "Verify/Validate action requires selector."}
+{"task_id": "6a48df7a238c879025897ba6", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T10:25:11.105666Z", "status": "FAILED", "error": "Verify/Validate action requires selector."}

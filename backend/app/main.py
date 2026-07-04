@@ -6,6 +6,7 @@ and base health routes.
 """
 
 import json
+import os
 import time
 import uuid
 from collections.abc import AsyncIterator
@@ -15,6 +16,7 @@ from typing import Any
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from app.api.v1 import v1_router
@@ -282,6 +284,10 @@ def create_app() -> FastAPI:
 
     # 6. Mount API Version 1 Routers
     app.include_router(v1_router, prefix="/api/v1")
+
+    # 7. Mount Static Workspace Files for Screenshots/Downloads
+    os.makedirs("workspace", exist_ok=True)
+    app.mount("/workspace", StaticFiles(directory="workspace"), name="workspace")
 
     return app
 

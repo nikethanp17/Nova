@@ -1,0 +1,11 @@
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "TaskStarted", "timestamp": "2026-07-04T09:19:36.465161Z"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepStarted", "timestamp": "2026-07-04T09:19:36.475422Z", "step_number": 1, "action": "navigate", "target": "https://careers.google.com"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T09:19:36.475906Z", "step_number": 1, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/backend/workspace/tasks/6a48d0161f7e9da74cbc93fe/screenshots/step_1.png"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepCompleted", "timestamp": "2026-07-04T09:19:36.476048Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepStarted", "timestamp": "2026-07-04T09:19:36.476153Z", "step_number": 2, "action": "fill", "target": "input[type='search']"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T09:19:36.476460Z", "step_number": 2, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/backend/workspace/tasks/6a48d0161f7e9da74cbc93fe/screenshots/step_2.png"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepCompleted", "timestamp": "2026-07-04T09:19:36.476573Z", "step_number": 2, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepStarted", "timestamp": "2026-07-04T09:19:36.476673Z", "step_number": 3, "action": "validate", "target": null}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T09:19:36.476956Z", "step_number": 3, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/backend/workspace/tasks/6a48d0161f7e9da74cbc93fe/screenshots/step_3.png"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "StepCompleted", "timestamp": "2026-07-04T09:19:36.477076Z", "step_number": 3, "status": "FAILED", "duration_ms": 0, "error": "Unsupported action trigger: validate"}
+{"task_id": "6a48d0161f7e9da74cbc93fe", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T09:19:36.477200Z", "status": "FAILED", "error": "Unsupported action trigger: validate"}

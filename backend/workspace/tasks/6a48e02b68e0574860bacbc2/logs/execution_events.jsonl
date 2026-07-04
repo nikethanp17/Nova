@@ -1,0 +1,14 @@
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "TaskStarted", "timestamp": "2026-07-04T10:27:55.387789Z"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepStarted", "timestamp": "2026-07-04T10:27:55.388222Z", "step_number": 1, "action": "navigate", "target": "file:///Users/nikethanp17/Downloads/NOVA/backend/workspace/test_page.html"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:27:55.388358Z", "step_number": 1, "screenshot_path": "/workspace/tasks/6a48e02b68e0574860bacbc2/screenshots/step_1.png"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:27:55.388409Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepStarted", "timestamp": "2026-07-04T10:27:55.388445Z", "step_number": 2, "action": "type", "target": "input#username-input"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:27:55.388549Z", "step_number": 2, "screenshot_path": "/workspace/tasks/6a48e02b68e0574860bacbc2/screenshots/step_2.png"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:27:55.388587Z", "step_number": 2, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepStarted", "timestamp": "2026-07-04T10:27:55.388615Z", "step_number": 3, "action": "click", "target": "button#submit-btn"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:27:55.388716Z", "step_number": 3, "screenshot_path": "/workspace/tasks/6a48e02b68e0574860bacbc2/screenshots/step_3.png"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:27:55.388750Z", "step_number": 3, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepStarted", "timestamp": "2026-07-04T10:27:55.388780Z", "step_number": 4, "action": "verify", "target": "div#success-message"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T10:27:55.388878Z", "step_number": 4, "screenshot_path": "/workspace/tasks/6a48e02b68e0574860bacbc2/screenshots/step_4.png"}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "StepCompleted", "timestamp": "2026-07-04T10:27:55.388923Z", "step_number": 4, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e02b68e0574860bacbc2", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T10:27:55.388970Z", "status": "SUCCESS", "error": null}

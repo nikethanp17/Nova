@@ -15,6 +15,7 @@ class TaskStatus(StrEnum):
 
     PENDING = "PENDING"
     PLANNING = "PLANNING"
+    READY = "READY"
     RUNNING = "RUNNING"
     WAITING = "WAITING"
     COMPLETED = "COMPLETED"

@@ -1,0 +1,6 @@
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "StepStarted", "timestamp": "2026-07-04T07:07:52.678991Z", "step_number": 1, "action": "navigate", "target": "file:///Users/nikethanp17/Downloads/NOVA/backend/workspace/test_page.html"}
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T07:07:52.679209Z", "step_number": 1, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/workspace/tasks/6a48b1489c72ab9d2144a0aa/screenshots/step_1.png"}
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "StepCompleted", "timestamp": "2026-07-04T07:07:52.679261Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "StepStarted", "timestamp": "2026-07-04T07:07:52.679299Z", "step_number": 2, "action": "type", "target": "input#username-input"}
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T07:07:52.679402Z", "step_number": 2, "screenshot_path": "/Users/nikethanp17/Downloads/NOVA/workspace/tasks/6a48b1489c72ab9d2144a0aa/screenshots/step_2.png"}
+{"task_id": "6a48b1489c72ab9d2144a0aa", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T07:07:52.679443Z", "status": "FAILED", "error": "'Page' object has no attribute 'url'"}

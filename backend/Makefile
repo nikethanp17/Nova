@@ -23,11 +23,11 @@ env:
 
 ## Start development server with hot reload
 dev: env
-	uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+	uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
 
 ## Start production server
 serve:
-	uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
+	uv run uvicorn app.main:app --host 0.0.0.0 --port 8080 --workers 4
 
 # ---------------------------------------------------------------------------
 # Code Quality

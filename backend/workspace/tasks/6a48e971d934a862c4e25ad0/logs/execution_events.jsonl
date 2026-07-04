@@ -1,0 +1,11 @@
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "TaskStarted", "timestamp": "2026-07-04T11:07:29.991864Z"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepStarted", "timestamp": "2026-07-04T11:07:29.992985Z", "step_number": 1, "action": "navigate", "target": "https://careers.google.com"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T11:07:29.993144Z", "step_number": 1, "screenshot_path": "/workspace/tasks/6a48e971d934a862c4e25ad0/screenshots/step_1.png"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepCompleted", "timestamp": "2026-07-04T11:07:29.993197Z", "step_number": 1, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepStarted", "timestamp": "2026-07-04T11:07:29.993742Z", "step_number": 2, "action": "click", "target": "[data-nova-idx='2']"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T11:07:29.993961Z", "step_number": 2, "screenshot_path": "/workspace/tasks/6a48e971d934a862c4e25ad0/screenshots/step_2.png"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepCompleted", "timestamp": "2026-07-04T11:07:29.994028Z", "step_number": 2, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepStarted", "timestamp": "2026-07-04T11:07:29.994498Z", "step_number": 3, "action": "verify", "target": "body"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "ScreenshotTaken", "timestamp": "2026-07-04T11:07:29.994639Z", "step_number": 3, "screenshot_path": "/workspace/tasks/6a48e971d934a862c4e25ad0/screenshots/step_3.png"}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "StepCompleted", "timestamp": "2026-07-04T11:07:29.994705Z", "step_number": 3, "status": "SUCCESS", "duration_ms": 0, "error": null}
+{"task_id": "6a48e971d934a862c4e25ad0", "event_type": "ExecutionFinished", "timestamp": "2026-07-04T11:07:29.995821Z", "status": "SUCCESS", "error": null}
